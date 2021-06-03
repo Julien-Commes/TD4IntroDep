@@ -8,9 +8,19 @@ int len_l(char* s){
     return len;
 }
 
+int nb_e(char* s){
+    int res=0;
+    while (*s++){
+        if (*s == 'e'){
+            res++;
+        }
+    }
+    return res;
+}
+
 int main(){
-    char* txt="abc";
-    printf("%i\n",len_l(txt));
+    char* txt="abeeefoirec";
+    printf("%i\n",nb_e(txt));
 }
 
 
