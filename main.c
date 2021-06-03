@@ -19,10 +19,6 @@ int nb_e(char* s){
 }
 
 int main(){
-    char* txt="abeeefoirec";
+    char* txt="abeefoirec";
     printf("%i\n",nb_e(txt));
 }
-
-
-
-
