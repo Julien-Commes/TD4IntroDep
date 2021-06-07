@@ -49,6 +49,19 @@ void append (int* s,int v){
     *(s+n+1)=v;
 }
 
+void insert(int* s,int value){
+    int n=*s;
+    *s=*s+1;
+    for (int i=n;i>0;i--){
+        *(s+i+1)=*(s+i);
+    }
+    *(s+1)=value;
+}
+
+int len_list (int* s){
+    return *s;
+}
+
 void print_list(int* s){
     int n=*s;
     printf("[");
@@ -58,10 +71,22 @@ void print_list(int* s){
     printf(" %i ]\n",*(s+n));
 }
 
+int* slice(int*s,int init,int fin){
+    int* res = malloc((fin-init+1)*sizeof(int));
+    if (fin<*s){
+        *res=fin-init;
+        for(int i=1;i<=*res;i++){
+            *(res+i)=*(s+i+init);
+        }
+        return res;
+    } 
+}
+
 int main(){
     int* l=list_empty();
     append(l,5);
-    append(l,8);
-    append(l,6);
-    print_list(l);
+    insert(l,8);
+    insert(l,6);
+    int* l_2=slice(l,0,2);
+    print_list(l_2);
 }
