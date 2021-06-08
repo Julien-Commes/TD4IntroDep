@@ -1,16 +1,17 @@
+
 all: main
     
-    main.o: main.c
-	    gcc -c main.c
 
-    triangle.o: triangle.c traingle.h
-	    gcc -c triangle.c
+main.o: main.c
+        gcc -c main.c
 
-    point.o: point.c point.h
-	    gcc -c point.c
 
-    main.o: point.o triangle.o main.o
-        gcc -o main point.o triangle.o main.o
-    
-    clean: 
-        rm -f "*-o"
+date.o: date.c date.h
+   gcc -c date.c
+
+
+main: main.o date.o 
+    gcc -o main main.o date.o
+
+clean: 
+    rm -f "*-o"
