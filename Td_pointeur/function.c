@@ -81,12 +81,3 @@ int* slice(int*s,int init,int fin){
         return res;
     } 
 }
-
-int main(){
-    int* l=list_empty();
-    append(l,5);
-    insert(l,8);
-    insert(l,6);
-    int* l_2=slice(l,0,2);
-    print_list(l_2);
-}
