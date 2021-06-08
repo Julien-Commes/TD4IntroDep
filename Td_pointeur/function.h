@@ -1,0 +1,10 @@
+int len_l(char* s);
+int nb_e(char* s);
+char* copy (char* s);
+void print_char (char* s);
+int* list_empty();
+void append (int* s,int v);
+void insert(int* s,int value);
+int len_list (int* s);
+void print_list(int* s);
+int* slice(int*s,int init,int fin);
