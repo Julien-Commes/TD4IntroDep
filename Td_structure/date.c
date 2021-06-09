@@ -12,7 +12,7 @@ date* create_date(int j,int m,int a){
 }
 
 void print_date(date* s){
-    printf("%i/%i/%i\n",s->j,s->m,s->a);
+    printf("%i/%i/%i",s->j,s->m,s->a);
 }
 
 

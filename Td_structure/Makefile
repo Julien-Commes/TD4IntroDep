@@ -11,8 +11,11 @@ date.o: date.c date.h
 personne.o: personne.h personne.c 
 	gcc -c personne.c
 
-main: main.o date.o personne.o
-	gcc -o main main.o date.o personne.o
+list.o: list.h list.c 
+	gcc -c list.c
+
+main: main.o date.o personne.o list.o
+	gcc -o main main.o date.o personne.o list.o
 	
 clean: 
 	rm -f *.o
